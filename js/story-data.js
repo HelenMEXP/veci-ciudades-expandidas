@@ -22,8 +22,8 @@ window.VECI_LOCALITY_MEDIA = {
     caption: "VIDEO / KENNEDY"
   },
   "Bosa": {
-    intro: "assets/video/bosa-demo.mp4",
-    caption: "VIDEO 360° / BOSA"
+    intro: "assets/video/seguir-vecino-bosa.mp4",
+    caption: "VIDEO / BOSA — material propio"
   }
 };
 

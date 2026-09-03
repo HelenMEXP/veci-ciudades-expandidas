@@ -49,11 +49,11 @@ import { VideoPlugin } from '@photo-sphere-viewer/video-plugin';
     return story[nodeName]?.media || null;
   }
 
+  // La localidad real se guarda para la lógica interna (material 360° por zona),
+  // pero no se muestra en pantalla: el recorrido es rizomático y no debe delatar
+  // desde el inicio en qué punto de entrada está la persona.
   if (selectedLocation) {
     sessionStorage.setItem('veci.localidad', selectedLocation);
-    locationEl.textContent = selectedLocation;
-  } else {
-    locationEl.textContent = sessionStorage.getItem('veci.localidad') || 'Bogotá';
   }
 
   // Escapa cadenas para evitar inyección HTML dentro de contenido dinámico.

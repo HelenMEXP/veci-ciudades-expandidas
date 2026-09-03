@@ -848,34 +848,11 @@ window.VECI_STORY = {
   },
   "QUEDARSE_SILENCIO": {
     "tag": "narrativa",
-    "html": "<span class=\"tag-silencio\">ESPERA</span>\n<h2>Te quedaste.</h2>\n<p>La pantalla permanece casi vacía.</p>\n<p><strong>8:00 PM</strong></p>",
+    "html": "<span class=\"tag-silencio\">ESPERA</span>\n<h2>Te quedaste.</h2>\n<p>La pantalla permanece casi vacía.</p>",
     "choices": [
       {
-        "label": "Entrar en la nueva hora",
-        "target": "OCHO_PM"
-      }
-    ]
-  },
-  "OCHO_PM": {
-    "tag": "narrativa",
-    "html": "<span class=\"tag-tiempo\">8:00 PM</span>\n<h2>Algo cambió.</h2>\n<p>¿Qué quieres hacer?</p>",
-    "media": {
-      "type": "audio",
-      "src": "assets/audio/ocho-pm-calle.mp3",
-      "caption": "SONIDO / CALLE AL ANOCHECER — atmósfera genérica"
-    },
-    "choices": [
-      {
-        "label": "Buscar una tienda abierta",
-        "target": "BUSCAR_ABIERTA"
-      },
-      {
-        "label": "Escuchar",
-        "target": "SONIDO_8PM"
-      },
-      {
-        "label": "Mirar alrededor",
-        "target": "MIRAR_ALREDEDOR"
+        "label": "¿Qué queda después del silencio?",
+        "target": "QUE_QUEDA"
       }
     ]
   },
@@ -889,30 +866,7 @@ window.VECI_STORY = {
       },
       {
         "label": "No encontrarla",
-        "target": "AUSENCIA"
-      }
-    ]
-  },
-  "SONIDO_8PM": {
-    "tag": "narrativa",
-    "html": "<span class=\"tag-audio\">8:00 PM</span>\n<h2>Escucha otra vez.</h2>",
-    "media": {
-      "type": "audio",
-      "src": "assets/audio/sonido-8pm.mp3",
-      "caption": "SONIDO / PAISAJE NOCTURNO — atmósfera genérica"
-    },
-    "choices": [
-      {
-        "label": "Voz",
-        "target": "UNA_VOZ"
-      },
-      {
-        "label": "Motor",
-        "target": "TRAFICO"
-      },
-      {
-        "label": "Silencio",
-        "target": "SILENCIO"
+        "target": "DESAPARICION"
       }
     ]
   },
@@ -1019,7 +973,7 @@ window.VECI_STORY = {
     "choices": [
       {
         "label": "Escuchar",
-        "target": "SONIDO_8PM"
+        "target": "PAISAJE_SONORO"
       },
       {
         "label": "Recordar",
@@ -1135,49 +1089,11 @@ window.VECI_STORY = {
     "choices": [
       {
         "label": "Seguir",
-        "target": "AUSENCIA"
+        "target": "DESAPARICION"
       },
       {
         "label": "Buscar resistencia",
         "target": "RESISTENCIA"
-      }
-    ]
-  },
-  "AUSENCIA": {
-    "tag": "narrativa",
-    "html": "<span class=\"tag-silencio\">AUSENCIA</span>\n<h2>No encontraste una tienda.</h2>\n<p>¿La ciudad perdió una tienda? ¿O perdió un lugar para encontrarse?</p>",
-    "media": {
-      "type": "audio",
-      "src": "assets/audio/ausencia-viento.mp3",
-      "caption": "SONIDO / CALLE DESOLADA — atmósfera genérica"
-    },
-    "choices": [
-      {
-        "label": "Seguir",
-        "target": "DIEZ_PM"
-      }
-    ]
-  },
-  "DIEZ_PM": {
-    "tag": "narrativa",
-    "html": "<span class=\"tag-tiempo\">10:00 PM</span>\n<h2>La ciudad sigue ahí.</h2>\n<p>¿Qué falta?</p>",
-    "media": {
-      "type": "audio",
-      "src": "assets/audio/diez-pm-noche.mp3",
-      "caption": "SONIDO / NOCHE EN LA CIUDAD — atmósfera genérica"
-    },
-    "choices": [
-      {
-        "label": "La gente",
-        "target": "QUE_QUEDA"
-      },
-      {
-        "label": "La tienda",
-        "target": "AUSENCIA"
-      },
-      {
-        "label": "El ruido",
-        "target": "SONIDO_8PM"
       }
     ]
   },

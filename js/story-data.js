@@ -220,7 +220,12 @@ window.VECI_STORY = {
   },
   "ENTRADA": {
     "tag": "narrativa",
-    "html": "<h2>Entras.</h2>\n<p><em>[AUDIO: puerta + ambiente interior]</em></p>\n<p>Una voz aparece antes que la imagen:</p>\n<p><strong>“¿Veci?”</strong></p>",
+    "html": "<h2>Entras.</h2>\n<p>Una voz aparece antes que la imagen:</p>\n<p><strong>“¿Veci?”</strong></p>",
+    "media": {
+      "type": "video",
+      "src": "assets/video/entrada-puerta.mp4",
+      "caption": "VIDEO / LA PUERTA — material propio, Engativá"
+    },
     "choices": [
       {
         "label": "Acercarte",
@@ -243,7 +248,7 @@ window.VECI_STORY = {
       "type": "image",
       "src": "assets/images/trafico-interseccion.jpg",
       "alt": "Intersección concurrida de Bogotá con TransMilenio, carros y motos",
-      "caption": "FOTO / TRÁFICO — Wikimedia Commons, revisar atribución (falta el audio de motores)"
+      "caption": "FOTO / TRÁFICO — Wikimedia Commons"
     },
     "choices": [
       {
@@ -280,7 +285,12 @@ window.VECI_STORY = {
   },
   "SONIDO": {
     "tag": "narrativa",
-    "html": "<span class=\"tag-audio\">SONIDO</span>\n<h2>No mires. Escucha.</h2>\n<p><em>[AUDIO: paisaje sonoro real]</em></p>\n<p>¿Qué apareció primero?</p>",
+    "html": "<span class=\"tag-audio\">SONIDO</span>\n<h2>No mires. Escucha.</h2>\n<p>¿Qué apareció primero?</p>",
+    "media": {
+      "type": "audio",
+      "src": "assets/audio/sonido-calle.mp3",
+      "caption": "SONIDO / PAISAJE DE CALLE — atmósfera genérica, no es grabación documental"
+    },
     "choices": [
       {
         "label": "Una voz",
@@ -302,7 +312,12 @@ window.VECI_STORY = {
   },
   "TENDERO": {
     "tag": "narrativa",
-    "html": "<span class=\"tag-persona\">PERSONA</span>\n<h2>La voz del tendero.</h2>\n<p><em>[VIDEO/TESTIMONIO: tendero]</em></p>\n<p>“¿Lo de siempre?”</p>\n<p>¿Qué quieres preguntarle?</p>",
+    "html": "<span class=\"tag-persona\">PERSONA</span>\n<h2>La voz del tendero.</h2>\n<p>“¿Lo de siempre?”</p>\n<p>¿Qué quieres preguntarle?</p>",
+    "media": {
+      "type": "audio",
+      "src": "assets/audio/tendero-ambiente.mp3",
+      "caption": "SONIDO / AMBIENTE DE TIENDA — atmósfera genérica, no es una grabación real del tendero"
+    },
     "choices": [
       {
         "label": "Por la tienda",
@@ -320,7 +335,7 @@ window.VECI_STORY = {
   },
   "VENDEDOR": {
     "tag": "narrativa",
-    "html": "<span class=\"tag-barrio\">CALLE</span>\n<h2>Una voz atraviesa la calle.</h2>\n<p><strong>“¡Mazamorra paisa!”</strong></p>\n<p><small>Foto propia — todavía falta el video/audio real de esta voz.</small></p>",
+    "html": "<span class=\"tag-barrio\">CALLE</span>\n<h2>Una voz atraviesa la calle.</h2>\n<p><strong>“¡Mazamorra paisa!”</strong></p>",
     "media": {
       "type": "image",
       "src": "assets/images/vendedor-informal.jpg",
@@ -376,7 +391,12 @@ window.VECI_STORY = {
   },
   "ME_REGALA": {
     "tag": "narrativa",
-    "html": "<h2>“Me regala...”</h2>\n<p><em>[AUDIO: frase real]</em></p>\n<p>La frase continúa en la tienda.</p>",
+    "html": "<h2>“Me regala...”</h2>\n<p>La frase continúa en la tienda.</p>",
+    "media": {
+      "type": "audio",
+      "src": "assets/audio/me-regala-tono.mp3",
+      "caption": "SONIDO / SEÑAL GENÉRICA"
+    },
     "choices": [
       {
         "label": "Elegir un producto",
@@ -477,7 +497,12 @@ window.VECI_STORY = {
   },
   "UNA_VOZ": {
     "tag": "narrativa",
-    "html": "<span class=\"tag-audio\">VOZ</span>\n<h2>Una voz.</h2>\n<p><em>[AUDIO: “¿Veci?”]</em></p>\n<p>La voz no te dijo dónde estás. Pero quizá ya reconoces el lugar.</p>",
+    "html": "<span class=\"tag-audio\">VOZ</span>\n<h2>Una voz.</h2>\n<p>La voz no te dijo dónde estás. Pero quizá ya reconoces el lugar.</p>",
+    "media": {
+      "type": "audio",
+      "src": "assets/audio/una-voz-hum.mp3",
+      "caption": "SONIDO / VOZ — recreación genérica, no es una grabación real"
+    },
     "choices": [
       {
         "label": "Seguir la voz",
@@ -495,7 +520,12 @@ window.VECI_STORY = {
   },
   "MUSICA": {
     "tag": "narrativa",
-    "html": "<span class=\"tag-audio\">MÚSICA</span>\n<h2>Una canción sale de algún lugar.</h2>\n<p><em>[AUDIO: música real del barrio]</em></p>",
+    "html": "<span class=\"tag-audio\">MÚSICA</span>\n<h2>Una canción sale de algún lugar.</h2>",
+    "media": {
+      "type": "audio",
+      "src": "assets/audio/musica-melodia.mp3",
+      "caption": "SONIDO / MELODÍA — recreación genérica, no corresponde a una canción real del barrio"
+    },
     "choices": [
       {
         "label": "Seguirla",
@@ -513,7 +543,12 @@ window.VECI_STORY = {
   },
   "SILENCIO": {
     "tag": "narrativa",
-    "html": "<span class=\"tag-silencio\">SILENCIO</span>\n<h2>No ocurre nada.</h2>\n<p><em>[AUDIO: ambiente mínimo]</em></p>\n<p>Quédate unos segundos.</p>",
+    "html": "<span class=\"tag-silencio\">SILENCIO</span>\n<h2>No ocurre nada.</h2>\n<p>Quédate unos segundos.</p>",
+    "media": {
+      "type": "audio",
+      "src": "assets/audio/silencio-ambiente.mp3",
+      "caption": "SONIDO / CASI SILENCIO — atmósfera genérica"
+    },
     "choices": [
       {
         "label": "Quedarme",
@@ -705,7 +740,7 @@ window.VECI_STORY = {
       "type": "image",
       "src": "assets/images/mirar-alrededor-barrio.jpg",
       "alt": "Calle de un barrio tradicional bogotano con casas de colores",
-      "caption": "FOTO AMPLIA — Wikimedia Commons, revisar atribución"
+      "caption": "FOTO AMPLIA — Wikimedia Commons"
     },
     "choices": [
       {
@@ -733,7 +768,7 @@ window.VECI_STORY = {
       "type": "image",
       "src": "assets/images/otra-tienda-kennedy.jpg",
       "alt": "Calle de un barrio de Kennedy sin comercio visible, día nublado",
-      "caption": "FOTO / EL LUGAR SIN TIENDA — Wikimedia Commons, revisar atribución"
+      "caption": "FOTO / EL LUGAR SIN TIENDA — Wikimedia Commons"
     },
     "choices": [
       {
@@ -752,7 +787,12 @@ window.VECI_STORY = {
   },
   "SEGUIR_VOZ": {
     "tag": "narrativa",
-    "html": "<h2>Sigues la voz.</h2>\n<p><em>[VIDEO: vendedor / recorrido]</em></p>\n<p>La voz te lleva hacia otra parte de la calle.</p>",
+    "html": "<h2>Sigues la voz.</h2>\n<p>La voz te lleva hacia otra parte de la calle.</p>",
+    "media": {
+      "type": "video",
+      "src": "assets/video/seguir-voz-calle.mp4",
+      "caption": "VIDEO / LA CALLE — material propio, Engativá"
+    },
     "choices": [
       {
         "label": "Entrar a la tienda",
@@ -766,7 +806,12 @@ window.VECI_STORY = {
   },
   "SEGUIR_MUSICA": {
     "tag": "narrativa",
-    "html": "<h2>Sigues la música.</h2>\n<p><em>[VIDEO: recorrido hacia la fuente del sonido]</em></p>",
+    "html": "<h2>Sigues la música.</h2>",
+    "media": {
+      "type": "video",
+      "src": "assets/video/seguir-musica-recorrido.mp4",
+      "caption": "VIDEO / RECORRIDO — material propio, edificio en Kennedy"
+    },
     "choices": [
       {
         "label": "Llegar a la calle",
@@ -780,7 +825,12 @@ window.VECI_STORY = {
   },
   "ESCUCHAR_MUSICA": {
     "tag": "narrativa",
-    "html": "<h2>Escuchas hasta el final.</h2>\n<p><em>[AUDIO COMPLETO]</em></p>\n<p>Ahora escucha lo que queda cuando termina.</p>",
+    "html": "<h2>Escuchas hasta el final.</h2>\n<p>Ahora escucha lo que queda cuando termina.</p>",
+    "media": {
+      "type": "audio",
+      "src": "assets/audio/escuchar-musica-completo.mp3",
+      "caption": "SONIDO / MELODÍA COMPLETA — recreación genérica"
+    },
     "choices": [
       {
         "label": "Silencio",
@@ -800,7 +850,12 @@ window.VECI_STORY = {
   },
   "OCHO_PM": {
     "tag": "narrativa",
-    "html": "<span class=\"tag-tiempo\">8:00 PM</span>\n<h2>Algo cambió.</h2>\n<p><em>[VIDEO: calle a las 8 PM]</em></p>\n<p>¿Qué quieres hacer?</p>",
+    "html": "<span class=\"tag-tiempo\">8:00 PM</span>\n<h2>Algo cambió.</h2>\n<p>¿Qué quieres hacer?</p>",
+    "media": {
+      "type": "audio",
+      "src": "assets/audio/ocho-pm-calle.mp3",
+      "caption": "SONIDO / CALLE AL ANOCHECER — atmósfera genérica"
+    },
     "choices": [
       {
         "label": "Buscar una tienda abierta",
@@ -832,7 +887,12 @@ window.VECI_STORY = {
   },
   "SONIDO_8PM": {
     "tag": "narrativa",
-    "html": "<span class=\"tag-audio\">8:00 PM</span>\n<h2>Escucha otra vez.</h2>\n<p><em>[AUDIO: paisaje sonoro 8 PM]</em></p>",
+    "html": "<span class=\"tag-audio\">8:00 PM</span>\n<h2>Escucha otra vez.</h2>",
+    "media": {
+      "type": "audio",
+      "src": "assets/audio/sonido-8pm.mp3",
+      "caption": "SONIDO / PAISAJE NOCTURNO — atmósfera genérica"
+    },
     "choices": [
       {
         "label": "Voz",
@@ -874,7 +934,7 @@ window.VECI_STORY = {
       "type": "image",
       "src": "assets/images/resistencia-barrio-tradicional.jpg",
       "alt": "Calle tradicional de un barrio bogotano con negocios locales activos",
-      "caption": "FOTO / EL BARRIO QUE RESISTE — Wikimedia Commons, revisar atribución"
+      "caption": "FOTO / EL BARRIO QUE RESISTE — Wikimedia Commons"
     },
     "choices": [
       {
@@ -970,7 +1030,7 @@ window.VECI_STORY = {
       "type": "image",
       "src": "assets/images/centro-comercial-hacienda.jpg",
       "alt": "Fachada de un centro comercial en Bogotá, entrada señalizada",
-      "caption": "FOTO / CENTRO COMERCIAL — Wikimedia Commons, revisar atribución"
+      "caption": "FOTO / CENTRO COMERCIAL — Wikimedia Commons"
     },
     "choices": [
       {
@@ -1077,7 +1137,12 @@ window.VECI_STORY = {
   },
   "AUSENCIA": {
     "tag": "narrativa",
-    "html": "<span class=\"tag-silencio\">AUSENCIA</span>\n<h2>No encontraste una tienda.</h2>\n<p><em>[VIDEO: calle desolada]</em></p>\n<p>¿La ciudad perdió una tienda? ¿O perdió un lugar para encontrarse?</p>",
+    "html": "<span class=\"tag-silencio\">AUSENCIA</span>\n<h2>No encontraste una tienda.</h2>\n<p>¿La ciudad perdió una tienda? ¿O perdió un lugar para encontrarse?</p>",
+    "media": {
+      "type": "audio",
+      "src": "assets/audio/ausencia-viento.mp3",
+      "caption": "SONIDO / CALLE DESOLADA — atmósfera genérica"
+    },
     "choices": [
       {
         "label": "Seguir",
@@ -1087,7 +1152,12 @@ window.VECI_STORY = {
   },
   "DIEZ_PM": {
     "tag": "narrativa",
-    "html": "<span class=\"tag-tiempo\">10:00 PM</span>\n<h2>La ciudad sigue ahí.</h2>\n<p><em>[VIDEO: calle desolada a las 10 PM]</em></p>\n<p>¿Qué falta?</p>",
+    "html": "<span class=\"tag-tiempo\">10:00 PM</span>\n<h2>La ciudad sigue ahí.</h2>\n<p>¿Qué falta?</p>",
+    "media": {
+      "type": "audio",
+      "src": "assets/audio/diez-pm-noche.mp3",
+      "caption": "SONIDO / NOCHE EN LA CIUDAD — atmósfera genérica"
+    },
     "choices": [
       {
         "label": "La gente",
@@ -1179,7 +1249,12 @@ window.VECI_STORY = {
   },
   "PAISAJE_SONORO": {
     "tag": "narrativa",
-    "html": "<span class=\"tag-audio\">PAISAJE SONORO</span>\n<h2>Escucha el barrio.</h2>\n<p><em>[AUDIO: voces, vendedores, motores, música]</em></p>",
+    "html": "<span class=\"tag-audio\">PAISAJE SONORO</span>\n<h2>Escucha el barrio.</h2>",
+    "media": {
+      "type": "audio",
+      "src": "assets/audio/paisaje-sonoro-barrio.mp3",
+      "caption": "SONIDO / PAISAJE SONORO DEL BARRIO — mezcla genérica (voces, motores, música), no es una grabación de campo"
+    },
     "choices": [
       {
         "label": "Seguir una voz",

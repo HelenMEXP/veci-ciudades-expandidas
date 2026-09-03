@@ -628,7 +628,15 @@ window.VECI_STORY = {
   },
   "CAMBIOS": {
     "tag": "narrativa",
-    "html": "<span class=\"tag-urbanizacion\">TRANSFORMACIÓN</span>\n<h2>¿Qué ha cambiado?</h2>\n<p><em>[FOTO COMPARATIVA]</em></p>",
+    "html": "<span class=\"tag-urbanizacion\">TRANSFORMACIÓN</span>\n<h2>¿Qué ha cambiado?</h2>",
+    "media": {
+      "type": "comparison",
+      "before": "assets/images/antes-kennedy.jpg",
+      "after": "assets/images/ahora-kennedy.jpg",
+      "beforeLabel": "ANTES",
+      "afterLabel": "AHORA",
+      "caption": "AVENIDA 26 SUR, KENNEDY — la misma vía, entre buses, comercio y obra"
+    },
     "choices": [
       {
         "label": "Mirar el antes",

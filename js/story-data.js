@@ -61,8 +61,8 @@ window.VECI_STORY = {
     "html": "<span class=\"tag-tiempo\">3:00 PM</span>\n<h2>La ciudad todavía está despierta.</h2>\n<p><strong>¿Qué viste primero?</strong></p>",
     "media": {
       "type": "video",
-      "src": "assets/video/seguir-voz-calle.mp4",
-      "caption": "VIDEO / LA CALLE A LAS 3 PM — material propio, Engativá"
+      "src": "assets/video/recorrido-calle-comercial.mp4",
+      "caption": "VIDEO / LA CALLE A LAS 3 PM — material propio"
     },
     "choices": [
       {

@@ -58,12 +58,11 @@ window.VECI_STORY = {
   },
   "TRES_PM": {
     "tag": "narrativa",
-    "html": "<span class=\"tag-tiempo\">3:00 PM</span>\n<h2>La ciudad todavía está despierta.</h2>\n<p>Muévete dentro del video: arrastra con el mouse o con el dedo para mirar alrededor.</p>\n<p><strong>¿Qué viste primero?</strong></p>",
+    "html": "<span class=\"tag-tiempo\">3:00 PM</span>\n<h2>La ciudad todavía está despierta.</h2>\n<p><strong>¿Qué viste primero?</strong></p>",
     "media": {
-      "type": "video360",
-      "projection": "eac",
-      "src": "assets/video/wunder360-eac-demo-h264.mp4",
-      "caption": "VIDEO 360° / ARRASTRA PARA EXPLORAR EL ESPACIO"
+      "type": "video",
+      "src": "assets/video/seguir-voz-calle.mp4",
+      "caption": "VIDEO / LA CALLE A LAS 3 PM — material propio, Engativá"
     },
     "choices": [
       {

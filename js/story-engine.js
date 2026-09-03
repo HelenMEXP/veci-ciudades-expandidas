@@ -6,11 +6,6 @@
  * organizada para lectura y mantenimiento profesional.
  */
 
-import { Viewer } from '@photo-sphere-viewer/core';
-import { CubemapVideoAdapter } from '@photo-sphere-viewer/cubemap-video-adapter';
-import { EquirectangularVideoAdapter } from '@photo-sphere-viewer/equirectangular-video-adapter';
-import { VideoPlugin } from '@photo-sphere-viewer/video-plugin';
-
 (() => {
   // Se cargan los datos narrativos y los elementos del DOM que se actualizan al recorrer la historia.
   const story = window.VECI_STORY || {};
@@ -28,7 +23,6 @@ import { VideoPlugin } from '@photo-sphere-viewer/video-plugin';
   const selectedLocation = allowedLocations.has(requestedLocation) ? requestedLocation : null;
   const trail = [];
   let currentNode = selectedLocation ? 'PUNTO_ELEGIDO' : 'Start';
-  let activeViewer = null;
 
   // Si la historia pertenece a una localidad, se usa su material multimedia asociado.
   function resolveLocalityMedia(nodeName) {
@@ -64,14 +58,6 @@ import { VideoPlugin } from '@photo-sphere-viewer/video-plugin';
       .replaceAll('>', '&gt;')
       .replaceAll('"', '&quot;')
       .replaceAll("'", '&#039;');
-  }
-
-  // Destruye el visor 360° abierto para liberar recursos al cambiar de nodo.
-  function destroyActiveMedia() {
-    if (activeViewer) {
-      activeViewer.destroy();
-      activeViewer = null;
-    }
   }
 
   // Convierte los placeholders tipo [VIDEO: ...] en bloques visuales legibles.
@@ -125,18 +111,6 @@ import { VideoPlugin } from '@photo-sphere-viewer/video-plugin';
             <span class="compare__tag compare__tag--before">${escapeHtml(media.beforeLabel || 'ANTES')}</span>
             <span class="compare__tag compare__tag--after">${escapeHtml(media.afterLabel || 'AHORA')}</span>
           </div>
-          ${caption}
-        </figure>`;
-    }
-
-    if (media.type === 'video360') {
-      return `
-        <figure class="story-media story-media--360">
-          <div class="story-360-head">
-            <span>360°</span>
-            <p>Arrastra para mirar alrededor</p>
-          </div>
-          <div id="viewer-360-${escapeHtml(nodeName)}" class="story-360-viewer" aria-label="Video interactivo 360 grados"></div>
           ${caption}
         </figure>`;
     }
@@ -195,43 +169,12 @@ import { VideoPlugin } from '@photo-sphere-viewer/video-plugin';
     setPosition(50);
   }
 
-  // Inicializa el visor 360° si el nodo lo requiere.
+  // Inicializa interacciones especiales de ciertos tipos de media (por ahora, el comparador antes/ahora).
   function initMedia(media, nodeName) {
     if (!media) return;
 
     if (media.type === 'comparison') {
       initComparisonSlider(nodeName);
-      return;
-    }
-
-    if (media.type !== 'video360') return;
-
-    const container = document.querySelector(`#viewer-360-${CSS.escape(nodeName)}`);
-    if (!container) return;
-
-    const isEac = (media.projection || '').toLowerCase() === 'eac';
-    const Adapter = isEac ? CubemapVideoAdapter : EquirectangularVideoAdapter;
-    const panorama = isEac
-      ? { source: media.src, equiangular: true }
-      : { source: media.src };
-
-    try {
-      activeViewer = new Viewer({
-        container,
-        adapter: Adapter,
-        panorama,
-        plugins: [VideoPlugin],
-        defaultZoomLvl: 35,
-        navbar: false,
-        caption: media.caption || 'Video 360°',
-      });
-    } catch (error) {
-      console.error('No fue posible iniciar el visor 360°:', error);
-      container.innerHTML = `
-        <div class="story-360-error">
-          <strong>No se pudo iniciar el visor 360°.</strong>
-          <span>Abre el proyecto con Live Server y verifica la conexión a Internet.</span>
-        </div>`;
     }
   }
 
@@ -297,13 +240,11 @@ import { VideoPlugin } from '@photo-sphere-viewer/video-plugin';
   function render(name, updateHash = true) {
     const node = story[name];
     if (!node) {
-      destroyActiveMedia();
       passageEl.innerHTML = `<h2>Nodo no encontrado.</h2><p>La sección <strong>${escapeHtml(name)}</strong> no existe.</p><a class="story-choice" href="index.html"><span>Volver al mapa</span><b>←</b></a>`;
       return;
     }
 
     saveInteractionValues();
-    destroyActiveMedia();
     currentNode = name;
     if (trail.at(-1) !== name) trail.push(name);
 
@@ -351,8 +292,6 @@ import { VideoPlugin } from '@photo-sphere-viewer/video-plugin';
     const hash = decodeURIComponent(window.location.hash.slice(1));
     if (hash && hash !== currentNode && story[hash]) render(hash, false);
   });
-
-  window.addEventListener('beforeunload', destroyActiveMedia);
 
   const initialHash = decodeURIComponent(window.location.hash.slice(1));
   render(initialHash && story[initialHash] ? initialHash : currentNode, false);

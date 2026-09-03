@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <!-- Meta tags y configuración general de la página. -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="¿VECI? — Ciudades Expandidas: narrativa rizomática sobre tiendas de barrio y transformación urbana en Bogotá." />
+  <title>¿VECI? — Ciudades Expandidas</title>
+
+  <!-- Fuentes tipográficas y estilos del mapa. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- =========================================================
+       PRELOADER: pantalla de carga inicial con video.
+       Se muestra al abrir la página y luego desaparece para dejar ver
+       la experiencia principal.
+       ========================================================= -->
+  <div id="preloader" class="preloader" aria-live="polite" aria-label="Cargando experiencia">
+    <video class="preloader__video" autoplay playsinline>
+      <source src="assets/video/Pantalla%20de%20carga%20.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <!-- =========================================================
+       CONTENIDO PRINCIPAL DEL SITIO.
+       Aquí va la portada, la introducción y el mapa interactivo.
+       ========================================================= -->
+  <main class="site-shell">
+    <!-- Encabezado superior con marca y edición. -->
+    <header class="masthead">
+      <a class="brand" href="#mapa" aria-label="Ir al mapa de ¿VECI?">
+        <span class="brand__word">¿VECI?</span><span class="brand__tag">Ciudades expandidas</span>
+      </a>
+      <p class="masthead__edition">Bogotá D.C. / 2026<br />Archivo en movimiento</p>
+    </header>
+
+    <!-- Sección principal de bienvenida. -->
+    <section class="hero" aria-labelledby="titulo-principal">
+      <div class="hero__copy">
+        <p class="eyebrow">01 — Selecciona una localidad</p>
+        <h1 id="titulo-principal">La ciudad crece.<br /><em>El barrio se ramifica.</em></h1>
+        <p class="intro">Una exploración sonora, visual y afectiva de las tiendas de barrio frente a la expansión urbana de Bogotá.</p>
+        <a class="scroll-cue" href="#mapa">Explorar el territorio <span aria-hidden="true">↓</span></a>
+      </div>
+
+      <!-- Mensaje conceptual del proyecto. -->
+      <aside class="manifesto" aria-label="Idea del proyecto">
+        <p>Cuando los edificios suben, la conversación de esquina encuentra otra forma de quedarse.</p>
+        <span>— ¿VECI?</span>
+      </aside>
+    </section>
+
+    <!-- Sección del mapa y entradas a las historias. -->
+    <section class="map-section" id="mapa" aria-labelledby="mapa-titulo">
+      <div class="map-section__heading">
+        <div>
+          <p class="eyebrow">Mapa de entrada</p>
+          <h2 id="mapa-titulo">Entra por<br />donde quieras.</h2>
+        </div>
+        <p class="map-instruction">No hay una ruta correcta.<br /><span>03 entradas / muchos cruces</span></p>
+      </div>
+
+      <!-- Contenedor del mapa interactivo de Leaflet. -->
+      <div class="map-frame">
+        <div id="bogota-map" aria-label="Mapa interactivo de Bogotá con entradas en Bos a, Kennedy y Engativá"></div>
+      </div>
+
+      <!-- Tarjetas alternativas para entrar a cada historia. -->
+      <div class="entry-cards" aria-label="Entradas alternativas al mapa">
+        <a href="story.html?localidad=Engativ%C3%A1" class="entry-card"><span>01</span><strong>???</strong><small>Cruces, comercio y memoria ↗</small></a>
+        <a href="story.html?localidad=Kennedy" class="entry-card"><span>02</span><strong>???</strong><small>Barrio, trayecto y encuentro ↗</small></a>
+        <a href="story.html?localidad=Bosa" class="entry-card"><span>03</span><strong>???</strong><small>Orillas, voces y resistencia ↗</small></a>
+      </div>
+    </section>
+
+    <!-- Footer general del sitio. -->
+    <footer class="site-footer">
+      <p>Una cartografía de afectos, negocios y memorias.</p>
+      <p>Multimedia Experimental — Ciudades Expandidas</p>
+    </footer>
+  </main>
+
+  <!-- Librería del mapa y lógica principal del proyecto. -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

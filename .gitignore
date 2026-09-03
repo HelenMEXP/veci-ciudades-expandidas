@@ -1,0 +1,14 @@
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+
+# Material crudo (no se sube al repo, pesa demasiado y no se usa en el sitio)
+*.insv
+*.lrv
+*.insp
+
+# Zips o backups temporales
+*.zip

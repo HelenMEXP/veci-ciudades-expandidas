@@ -180,7 +180,13 @@ window.VECI_STORY = {
   },
   "AVISOS": {
     "tag": "narrativa",
-    "html": "<span class=\"tag-barrio\">LENGUAJE</span>\n<h2>Los avisos también hablan.</h2>\n<p><em>[FOTO: avisos y carteles]</em></p>\n<p>¿Cuál leerías primero?</p>",
+    "html": "<span class=\"tag-barrio\">LENGUAJE</span>\n<h2>Los avisos también hablan.</h2>\n<p>¿Cuál leerías primero?</p>",
+    "media": {
+      "type": "image",
+      "src": "assets/images/avisos-construccion.jpg",
+      "alt": "Poste con aviso publicitario junto a una obra en construcción, esquina de Bogotá",
+      "caption": "FOTO / AVISOS Y CARTELES — material propio"
+    },
     "choices": [
       {
         "label": "¿Veci?",
@@ -202,7 +208,13 @@ window.VECI_STORY = {
   },
   "NEVERA": {
     "tag": "narrativa",
-    "html": "<h2>La nevera de la esquina.</h2>\n<p><em>[FOTO: nevera/productos]</em></p>\n<p>No es solamente una nevera.</p>\n<p>¿Qué aparece en tu cabeza?</p>",
+    "html": "<h2>La nevera de la esquina.</h2>\n<p>No es solamente una nevera.</p>\n<p>¿Qué aparece en tu cabeza?</p>",
+    "media": {
+      "type": "image",
+      "src": "assets/images/nevera-vitrina.jpg",
+      "alt": "Vitrina de una tienda de barrio vista tras una reja, con productos en los estantes",
+      "caption": "FOTO / LA VITRINA — material propio"
+    },
     "choices": [
       {
         "label": "Un producto",
@@ -359,7 +371,13 @@ window.VECI_STORY = {
   },
   "COLORES": {
     "tag": "narrativa",
-    "html": "<span class=\"tag-barrio\">COLORES</span>\n<h2>El barrio también se reconoce por cómo se ve.</h2>\n<p><em>[FOTO INTERACTIVA: colores, avisos, fachadas]</em></p>\n<p>Encuentra tres colores que no pertenezcan a la misma marca.</p>",
+    "html": "<span class=\"tag-barrio\">COLORES</span>\n<h2>El barrio también se reconoce por cómo se ve.</h2>\n<p>Encuentra tres colores que no pertenezcan a la misma marca.</p>",
+    "media": {
+      "type": "image",
+      "src": "assets/images/tienda-fachada.jpg",
+      "alt": "Fachada de una tienda de barrio con colores y avisos variados",
+      "caption": "FOTO / COLORES DE LA FACHADA — material propio (misma foto de la fachada, otra mirada)"
+    },
     "choices": [
       {
         "label": "Terminé",
@@ -410,7 +428,13 @@ window.VECI_STORY = {
   },
   "PRODUCTOS": {
     "tag": "narrativa",
-    "html": "<h2>Los productos.</h2>\n<p><em>[FOTO INTERACTIVA: productos de tienda]</em></p>\n<p>Este producto también tiene una historia.</p>\n<p>¿Quién podría comprarlo?</p>",
+    "html": "<h2>Los productos.</h2>\n<p>Este producto también tiene una historia.</p>\n<p>¿Quién podría comprarlo?</p>",
+    "media": {
+      "type": "image",
+      "src": "assets/images/productos-vending.jpg",
+      "alt": "Máquina expendedora de snacks y bebidas, otra forma de vender productos",
+      "caption": "FOTO / PRODUCTOS — material propio"
+    },
     "choices": [
       {
         "label": "Un vecino",
@@ -933,7 +957,12 @@ window.VECI_STORY = {
   },
   "FIADO": {
     "tag": "narrativa",
-    "html": "<span class=\"tag-comunidad\">CONFIANZA</span>\n<h2>La libreta.</h2>\n<p><em>[FOTO/AUDIO/TESTIMONIO: fiado]</em></p>\n<p>Una libreta puede guardar años de confianza.</p>",
+    "html": "<span class=\"tag-comunidad\">CONFIANZA</span>\n<h2>La libreta.</h2>\n<p>Una libreta puede guardar años de confianza.</p>",
+    "media": {
+      "type": "audio",
+      "src": "assets/audio/fiado-libreta.mp3",
+      "caption": "SONIDO / PÁGINAS Y LÁPIZ — atmósfera genérica, no es un testimonio real"
+    },
     "choices": [
       {
         "label": "Seguir la historia",
@@ -1196,7 +1225,13 @@ window.VECI_STORY = {
   },
   "COMUNIDAD": {
     "tag": "narrativa",
-    "html": "<span class=\"tag-comunidad\">COMUNIDAD</span>\n<h2>La tienda conecta.</h2>\n<p><em>[FOTO/VIDEO: encuentro entre vecinos]</em></p>",
+    "html": "<span class=\"tag-comunidad\">COMUNIDAD</span>\n<h2>La tienda conecta.</h2>",
+    "media": {
+      "type": "image",
+      "src": "assets/images/comunidad-mercado.jpg",
+      "alt": "Vendedor y comprador en un puesto de frutas y verduras en la calle",
+      "caption": "FOTO / ENCUENTRO — material propio"
+    },
     "choices": [
       {
         "label": "Conversación",
